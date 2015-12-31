@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		D075AEB61C353CCE00C9DD25 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D075AEB51C353CCE00C9DD25 /* main.m */; };
 		D075AEB91C353CCE00C9DD25 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D075AEB81C353CCE00C9DD25 /* AppDelegate.m */; };
-		D075AEBC1C353CCE00C9DD25 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D075AEBB1C353CCE00C9DD25 /* ViewController.m */; };
 		D075AEBF1C353CCE00C9DD25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D075AEBD1C353CCE00C9DD25 /* Main.storyboard */; };
 		D075AEC21C353CCE00C9DD25 /* CoreDataPrac.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D075AEC01C353CCE00C9DD25 /* CoreDataPrac.xcdatamodeld */; };
 		D075AEC41C353CCE00C9DD25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D075AEC31C353CCE00C9DD25 /* Assets.xcassets */; };
 		D075AEC71C353CCE00C9DD25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D075AEC51C353CCE00C9DD25 /* LaunchScreen.storyboard */; };
 		D075AED21C353CCE00C9DD25 /* CoreDataPracTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D075AED11C353CCE00C9DD25 /* CoreDataPracTests.m */; };
 		D075AEDD1C353CCE00C9DD25 /* CoreDataPracUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D075AEDC1C353CCE00C9DD25 /* CoreDataPracUITests.m */; };
+		D075AEEC1C353E6D00C9DD25 /* DeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D075AEEB1C353E6D00C9DD25 /* DeviceViewController.m */; };
+		D075AEEF1C35403D00C9DD25 /* DeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D075AEEE1C35403D00C9DD25 /* DeviceDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +41,6 @@
 		D075AEB51C353CCE00C9DD25 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D075AEB71C353CCE00C9DD25 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D075AEB81C353CCE00C9DD25 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		D075AEBA1C353CCE00C9DD25 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D075AEBB1C353CCE00C9DD25 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D075AEBE1C353CCE00C9DD25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D075AEC11C353CCE00C9DD25 /* CoreDataPrac.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataPrac.xcdatamodel; sourceTree = "<group>"; };
 		D075AEC31C353CCE00C9DD25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -53,6 +52,10 @@
 		D075AED81C353CCE00C9DD25 /* CoreDataPracUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataPracUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D075AEDC1C353CCE00C9DD25 /* CoreDataPracUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataPracUITests.m; sourceTree = "<group>"; };
 		D075AEDE1C353CCE00C9DD25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D075AEEA1C353E6D00C9DD25 /* DeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceViewController.h; sourceTree = "<group>"; };
+		D075AEEB1C353E6D00C9DD25 /* DeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceViewController.m; sourceTree = "<group>"; };
+		D075AEED1C35403D00C9DD25 /* DeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceDetailViewController.h; sourceTree = "<group>"; };
+		D075AEEE1C35403D00C9DD25 /* DeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,14 +108,16 @@
 			children = (
 				D075AEB71C353CCE00C9DD25 /* AppDelegate.h */,
 				D075AEB81C353CCE00C9DD25 /* AppDelegate.m */,
-				D075AEBA1C353CCE00C9DD25 /* ViewController.h */,
-				D075AEBB1C353CCE00C9DD25 /* ViewController.m */,
 				D075AEBD1C353CCE00C9DD25 /* Main.storyboard */,
 				D075AEC31C353CCE00C9DD25 /* Assets.xcassets */,
 				D075AEC51C353CCE00C9DD25 /* LaunchScreen.storyboard */,
 				D075AEC81C353CCE00C9DD25 /* Info.plist */,
 				D075AEC01C353CCE00C9DD25 /* CoreDataPrac.xcdatamodeld */,
 				D075AEB41C353CCE00C9DD25 /* Supporting Files */,
+				D075AEEA1C353E6D00C9DD25 /* DeviceViewController.h */,
+				D075AEEB1C353E6D00C9DD25 /* DeviceViewController.m */,
+				D075AEED1C35403D00C9DD25 /* DeviceDetailViewController.h */,
+				D075AEEE1C35403D00C9DD25 /* DeviceDetailViewController.m */,
 			);
 			path = CoreDataPrac;
 			sourceTree = "<group>";
@@ -273,8 +278,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D075AEBC1C353CCE00C9DD25 /* ViewController.m in Sources */,
+				D075AEEC1C353E6D00C9DD25 /* DeviceViewController.m in Sources */,
 				D075AEB91C353CCE00C9DD25 /* AppDelegate.m in Sources */,
+				D075AEEF1C35403D00C9DD25 /* DeviceDetailViewController.m in Sources */,
 				D075AEC21C353CCE00C9DD25 /* CoreDataPrac.xcdatamodeld in Sources */,
 				D075AEB61C353CCE00C9DD25 /* main.m in Sources */,
 			);
