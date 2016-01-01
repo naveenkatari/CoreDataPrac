@@ -61,9 +61,31 @@
     static NSString *cellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     NSManagedObject *device = [self.devices objectAtIndex:indexPath.row];
-    [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", [device valueForKey:@"name"], [device valueForKey:@"version"]]];
+    [cell.textLabel setText:[NSString stringWithFormat:@"%@ %@", [device valueForKey:@"company"], [device valueForKey:@"name"]]];
     [cell.detailTextLabel setText:[device valueForKey:@"version"]];
     return  cell;
+}
+
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    if (editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        [context deleteObject:[self.devices objectAtIndex:indexPath.row]];
+        NSError *error = nil;
+        if (![context save:&error])
+        {
+            NSLog(@"Can't delete %@ %@", error, [error localizedDescription]);
+            return;
+        }
+        [self.devices removeObjectAtIndex:indexPath.row];
+        [self.devicesTableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        [self.devicesTableView reloadData];
+    }
 }
 
 @end

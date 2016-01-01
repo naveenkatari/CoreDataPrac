@@ -46,6 +46,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="y5U-83-tsv" id="Ik6-HK-iIS"/>
+                                    <outlet property="delegate" destination="y5U-83-tsv" id="sQN-NL-NKU"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -162,6 +166,8 @@
                             <constraint firstItem="mfb-xd-fAs" firstAttribute="top" secondItem="E70-WR-D54" secondAttribute="bottom" id="gXz-TZ-wRJ"/>
                             <constraint firstAttribute="trailing" secondItem="E70-WR-D54" secondAttribute="trailing" constant="40" id="hqc-0E-1XP"/>
                             <constraint firstAttribute="trailing" secondItem="eHs-G6-mJN" secondAttribute="trailing" constant="40" id="jRZ-Cd-hwy"/>
+                            <constraint firstItem="eHs-G6-mJN" firstAttribute="top" secondItem="AMl-rB-azE" secondAttribute="bottom" constant="54" id="knW-Xs-jtG"/>
+                            <constraint firstItem="eHs-G6-mJN" firstAttribute="top" secondItem="bSB-P0-vPD" secondAttribute="bottom" constant="30" id="p1g-Fa-DgK"/>
                             <constraint firstAttribute="trailing" secondItem="bSB-P0-vPD" secondAttribute="trailing" id="pIA-9y-gH5"/>
                             <constraint firstItem="bSB-P0-vPD" firstAttribute="leading" secondItem="ovd-gi-lWs" secondAttribute="leading" id="pfr-Dn-hmY"/>
                             <constraint firstItem="O7F-4H-QAg" firstAttribute="top" secondItem="mfb-xd-fAs" secondAttribute="bottom" constant="20" id="pu0-uK-v41"/>
@@ -171,6 +177,13 @@
                             <constraint firstItem="YpO-FY-PCP" firstAttribute="top" secondItem="eHs-G6-mJN" secondAttribute="bottom" id="x8S-Na-bQh"/>
                             <constraint firstItem="E70-WR-D54" firstAttribute="top" secondItem="YpO-FY-PCP" secondAttribute="bottom" constant="20" id="zDW-8s-UE8"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fZh-AT-9NY"/>
+                                <exclude reference="knW-Xs-jtG"/>
+                                <exclude reference="GOb-bz-ae7"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="companyTextField" destination="E70-WR-D54" id="OoD-po-NvT"/>
@@ -180,7 +193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0u-lK-6j3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1991" y="512"/>
+            <point key="canvasLocation" x="2048" y="497"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tgc-vn-Pj6">
